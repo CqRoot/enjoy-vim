@@ -25,9 +25,7 @@ inoremap <M-b> <S-Left>
 inoremap <M-f> <S-Right>
 
 " Auto run script
-nmap <leader>r :call StartRun()<CR>
-
-function! StartRun()
+function! RunScript()
     if &filetype == 'sh'
         exec "w"
         exec "!bash -x %"
@@ -39,6 +37,3 @@ function! StartRun()
         exec "source %"
     endif
 endfunc
-
-" Open sidebar
-nmap <leader>s :NERDTree\|:TagbarOpen<CR>

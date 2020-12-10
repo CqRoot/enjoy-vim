@@ -6,13 +6,6 @@ call plug#begin(expand('<sfile>:p:h').'/plugged')
     Plug 'joshdick/onedark.vim'
 " }
 
-" Keymap {
-    Plug 'liuchengxu/vim-which-key'
-    nnoremap <silent> <C-s> :WhichKey '<Space>'<CR>
-    set timeoutlen=0
-    let g:which_key_use_floating_win = 0
-" }
-
 " Finder {
     Plug 'Yggdroot/LeaderF'
 " }
@@ -32,6 +25,7 @@ call plug#begin(expand('<sfile>:p:h').'/plugged')
     Plug 'ncm2/ncm2-path'
     Plug 'ncm2/ncm2-jedi'
     Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
+    Plug 'ncm2/ncm2-go'
 
     Plug 'ncm2/ncm2-ultisnips'
     Plug 'SirVer/ultisnips'
@@ -67,6 +61,10 @@ call plug#begin(expand('<sfile>:p:h').'/plugged')
     Plug 'voldikss/vim-translator'
     nmap <silent> <Leader>w <Plug>TranslateW
     vmap <silent> <Leader>w <Plug>TranslateWV
+
+    Plug 'skywind3000/vim-quickui'
+
+    Plug 'ludovicchabant/vim-gutentags'
 " }
 
 call plug#end()

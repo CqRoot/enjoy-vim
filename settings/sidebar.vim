@@ -18,11 +18,11 @@
     let g:tagbar_vertical = 25
 " }
 
-autocmd vimenter * NERDTree | TagbarOpen
-autocmd vimenter * wincmd l
-
 " vista {
     autocmd bufenter * if (winnr("$") == 1 && &filetype =~# 'vista') | q | endif
     let g:vista_echo_cursor_strategy = 'floating_win'
-    let g:vista_sidebar_position = 'vertical topleft'
+    " let g:vista_sidebar_position = 'vertical topleft'
 " }
+
+" autocmd vimenter * NERDTree | TagbarOpen
+" autocmd vimenter * wincmd l
