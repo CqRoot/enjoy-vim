@@ -56,7 +56,6 @@ call plug#begin(expand('<sfile>:p:h').'/plugged')
     Plug 'rbgrouleff/bclose.vim'
     Plug 'francoiscabrol/ranger.vim'
     let g:ranger_map_keys = 0
-    nmap <leader>g :Ranger<CR>
 
     Plug 'voldikss/vim-translator'
     nmap <silent> <Leader>w <Plug>TranslateW

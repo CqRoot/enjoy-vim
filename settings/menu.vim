@@ -6,7 +6,7 @@ let g:quickui_color_scheme = 'papercol light'
 function OpenGlobalMenu()
     let content = [
                 \ ["Run this script", 'call RunScript()' ],
-                \ ["Ranger", 'Ranger'],
+                \ ["&Ranger", 'Ranger'],
                 \ ["&Vista", 'Vista'],
                 \ ["&NERDTree", 'NERDTree'],
                 \ ['-'],
@@ -17,7 +17,7 @@ function OpenGlobalMenu()
                 \ ["Leaderf &file", 'Leaderf file' ],
                 \ ["Leaderf &line", 'Leaderf line'],
                 \ ["Leaderf &buffer", 'Leaderf buffer'],
-                \ ["Leaderf &rg", 'Leaderf rg'],
+                \ ["Leaderf r&g", 'Leaderf rg'],
                 \ ]
     " set cursor to the last position
     " let opts = {'index':g:quickui#context#cursor}

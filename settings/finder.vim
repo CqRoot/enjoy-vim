@@ -7,3 +7,7 @@ let g:Lf_ShortcutB = "<leader>fb"
 nmap <leader>fr :Leaderf rg<CR>
 nmap <leader>ft :LeaderfTag<CR>
 nmap <leader>fl :LeaderfLine<CR>
+
+let g:Lf_RgConfig = [
+            \ "--ignore-file='".expand('<sfile>:p:h')."/rgignore'"
+            \ ]

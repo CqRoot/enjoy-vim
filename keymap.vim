@@ -1,9 +1,9 @@
 let mapleader = " "
 
 " Buffer
-nmap J :bp!<CR>
-nmap K :bn!<CR>
-nmap <leader>d :bp\|bd #<CR>
+nmap <silent> J :bp!<CR>
+nmap <silent> K :bn!<CR>
+nmap <silent> <leader>d :bp\|bd #<CR>
 
 " Emacs-like keymap
 cnoremap <C-a> <Home>
