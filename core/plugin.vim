@@ -8,8 +8,9 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
 " }
 
 " Finder {
-    " Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 " }
 
 " Sidebar {
