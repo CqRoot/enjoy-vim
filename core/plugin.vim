@@ -8,9 +8,9 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
 " }
 
 " Finder {
-    Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
+    if has('python3')
+        Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+    endif
 " }
 
 " Sidebar {
@@ -34,12 +34,32 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
     Plug 'sbdchd/neoformat'
 " }
 
-" Completion - asyncomplete {
-    Plug 'prabirshrestha/asyncomplete.vim'
-    Plug 'prabirshrestha/vim-lsp'
-    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Completion {
+    if has('python3')
+        " ncm2
+        Plug 'ncm2/ncm2'
+        Plug 'roxma/nvim-yarp'
 
-    Plug 'prabirshrestha/asyncomplete-file.vim'
+        Plug 'prabirshrestha/async.vim'
+        Plug 'ncm2/ncm2-vim-lsp'
+        Plug 'ncm2/ncm2-ultisnips'
+
+        Plug 'ncm2/ncm2-bufword'
+        Plug 'ncm2/ncm2-path'
+    elseif
+        " asyncomplete
+        Plug 'prabirshrestha/asyncomplete.vim'
+        Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+        Plug 'prabirshrestha/asyncomplete-file.vim'
+    endif
+
+    " Common
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+" }
+" Completion - ncm2 {
 " }
 
 " Git {
