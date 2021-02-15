@@ -8,7 +8,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
 " }
 
 " Finder {
-    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+    " Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 " }
 
@@ -51,7 +51,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
 " }
 
 " Other {
-    Plug 'voldikss/vim-translator'
+    " Plug 'voldikss/vim-translator'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'thinca/vim-quickrun'

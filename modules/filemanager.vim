@@ -1,4 +1,4 @@
-if index(g:plugs_order, 'defx.nvim') >= 0
+if exists('g:loaded_defx')
     nmap <silent> <A-f> :Defx<CR>
 
     " auto close if it is the last

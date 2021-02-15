@@ -42,15 +42,16 @@ function! RunScript()
 endfunc
 
 " Terminal {
-  tnoremap <Esc> <C-\><C-n>
-
   nnoremap <silent> <A-=> :bo vsplit \| terminal<CR>
   nnoremap <silent> <A--> :bo split \| terminal<CR>
 
-  tnoremap <A-h> <C-\><C-N><C-w>h
-  tnoremap <A-j> <C-\><C-N><C-w>j
-  tnoremap <A-k> <C-\><C-N><C-w>k
-  tnoremap <A-l> <C-\><C-N><C-w>l
+  if has('nvim')
+      tnoremap <Esc> <C-\><C-n>
+      tnoremap <A-h> <C-\><C-N><C-w>h
+      tnoremap <A-j> <C-\><C-N><C-w>j
+      tnoremap <A-k> <C-\><C-N><C-w>k
+      tnoremap <A-l> <C-\><C-N><C-w>l
+  endif
   inoremap <A-h> <C-\><C-N><C-w>h
   inoremap <A-j> <C-\><C-N><C-w>j
   inoremap <A-k> <C-\><C-N><C-w>k
