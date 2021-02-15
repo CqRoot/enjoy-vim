@@ -1,4 +1,4 @@
-if index(g:plugs_order, 'nerdcommenter') >= 0
+if has_key(g:plugs, 'nerdcommenter')
     " 使用Ctrl+/来注释内容
     if has("win32")
         nmap <C-/> <plug>NERDCommenterToggle
@@ -22,13 +22,13 @@ if index(g:plugs_order, 'nerdcommenter') >= 0
     let g:NERDToggleCheckAllLines = 1
 endif
 
-if index(g:plugs_order, 'indentLine') >= 0
+if has_key(g:plugs, 'indentLine')
     if has('nvim')
         autocmd TermOpen * IndentLinesDisable
     endif
     autocmd FileType markdown let g:indentLine_enabled=0
 endif
 
-if index(g:plugs_order, 'neoformat') >= 0
+if has_key(g:plugs, 'neoformat')
     let g:neoformat_enabled_go = ['gofmt']
 endif

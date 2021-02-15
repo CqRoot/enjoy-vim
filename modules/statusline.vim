@@ -1,4 +1,4 @@
-if index(g:plugs_order, 'vim-airline') >= 0
+if has_key(g:plugs, 'vim-airline')
 
     " 改变状态栏风格为直的风格
     let g:airline_left_sep=' '
