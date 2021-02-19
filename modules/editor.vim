@@ -30,5 +30,9 @@ if has_key(g:plugs, 'indentLine')
 endif
 
 if has_key(g:plugs, 'neoformat')
-    let g:neoformat_enabled_go = ['gofmt']
+    let g:neoformat_go_golines = {
+                \ 'exe': 'golines',
+                \ 'stdin': 1,
+                \ }
+    let g:neoformat_enabled_go = ['golines', 'gofmt']
 endif
