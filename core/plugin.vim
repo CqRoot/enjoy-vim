@@ -46,7 +46,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
 
         Plug 'ncm2/ncm2-bufword'
         Plug 'ncm2/ncm2-path'
-    elseif
+    else
         " asyncomplete
         Plug 'prabirshrestha/asyncomplete.vim'
         Plug 'prabirshrestha/asyncomplete-lsp.vim'
