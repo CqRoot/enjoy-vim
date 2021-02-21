@@ -6,17 +6,6 @@ if has_key(g:plugs, 'defx.nvim')
                 \ && (!has('vim_starting'))
                 \ && winbufnr(2) == -1 | quit! | endif
 
-	call defx#custom#column('icon', {
-	      \ 'directory_icon': '▸',
-	      \ 'opened_icon': '▾',
-	      \ 'root_icon': ' ',
-	      \ })
-
-	call defx#custom#column('mark', {
-	      \ 'readonly_icon': '✗',
-	      \ 'selected_icon': '✓',
-	      \ })
-
     call defx#custom#option('_', {
                 \ 'winwidth': 30,
                 \ 'split': 'vertical',
@@ -50,6 +39,7 @@ if has_key(g:plugs, 'defx.nvim')
     function! s:defx_mappings() abort
         " Define mappings
         nnoremap <silent><buffer><expr> <2-LeftMouse> <sid>defx_toggle_tree_or_open_file()
+        nnoremap <silent><buffer><expr> h             defx#do_action('open_tree')
         nnoremap <silent><buffer><expr> l             <sid>defx_toggle_tree_or_open_file()
         nnoremap <silent><buffer><expr> <CR>          <sid>defx_cd_or_open_file()
 
@@ -72,7 +62,6 @@ if has_key(g:plugs, 'defx.nvim')
         nnoremap <silent><buffer><expr> .       defx#do_action('toggle_ignored_files')
         nnoremap <silent><buffer><expr> ;       defx#do_action('repeat')
         nnoremap <silent><buffer><expr> <BS>    defx#do_action('cd', ['..'])
-        nnoremap <silent><buffer><expr> h       defx#do_action('cd', ['..'])
         nnoremap <silent><buffer><expr> ~       defx#do_action('cd')
         nnoremap <silent><buffer><expr> q       defx#do_action('quit')
         nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select') . 'j'
