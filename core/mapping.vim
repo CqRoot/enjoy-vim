@@ -38,6 +38,8 @@ function! RunScript()
     exec "source %"
   elseif &filetype == 'go'
     exec "!go run %"
+  elseif &filetype == 'tmux'
+    exec "!tmux source %"
   endif
 endfunc
 
