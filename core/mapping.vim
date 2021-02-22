@@ -65,7 +65,4 @@ endfunc
 " }
 
 " Plugin {
-  inoremap <silent> <A-l> :Neoformat<CR>
-  nnoremap <silent> <A-l> :Neoformat<CR>
-  vnoremap <silent> <A-l> :Neoformat<CR>
 " }
