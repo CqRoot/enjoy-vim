@@ -32,6 +32,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
     Plug 'Yggdroot/indentLine'
     Plug 'sheerun/vim-polyglot'
     Plug 'sbdchd/neoformat'
+    Plug 'psliwka/vim-smoothie'
 " }
 
 " Completion {
