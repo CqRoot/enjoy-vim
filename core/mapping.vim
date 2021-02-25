@@ -65,4 +65,22 @@ endfunc
 " }
 
 " Plugin {
+  " LeaderF
+  noremap <leader>b :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+  noremap <leader>t :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+  noremap <leader>l :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+  noremap <leader>g :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
+
+  " Defx
+  nmap <silent> <A-f> :Defx<CR>
+
+  " NerdCommenter
+  " 使用Ctrl+/来注释内容
+  if has("win32")
+    nmap <C-/> <plug>NERDCommenterToggle
+    xmap <C-/> <plug>NERDCommenterToggle
+  else
+    nmap <C-_> <plug>NERDCommenterToggle
+    xmap <C-_> <plug>NERDCommenterToggle
+  endif
 " }

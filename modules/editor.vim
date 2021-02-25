@@ -1,13 +1,4 @@
 if has_key(g:plugs, 'nerdcommenter')
-    " 使用Ctrl+/来注释内容
-    if has("win32")
-        nmap <C-/> <plug>NERDCommenterToggle
-        xmap <C-/> <plug>NERDCommenterToggle
-    else
-        nmap <C-_> <plug>NERDCommenterToggle
-        xmap <C-_> <plug>NERDCommenterToggle
-    endif
-
     " 注释分隔符左对齐，而不是按行缩进
     let g:NERDDefaultAlign = 'left'
 

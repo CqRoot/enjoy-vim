@@ -1,6 +1,4 @@
 if has_key(g:plugs, 'defx.nvim')
-    nmap <silent> <A-f> :Defx<CR>
-
     " auto close if it is the last
     autocmd BufEnter * if (&buftype ==# 'defx' || &buftype ==# 'nofile')
                 \ && (!has('vim_starting'))
