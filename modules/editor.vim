@@ -34,5 +34,10 @@ if has_key(g:plugs, 'neoformat')
                 \ 'exe': 'golines',
                 \ 'stdin': 1,
                 \ }
-    let g:neoformat_enabled_go = ['golines', 'gofmt']
+    let g:neoformat_enabled_go = ['golines']
+    let g:neoformat_enabled_python = ['black']
+endif
+
+if has_key(g:plugs, 'ale')
+    let g:ale_linters = {'python': ['pylint', 'pycodestyle']}
 endif

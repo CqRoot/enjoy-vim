@@ -33,6 +33,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
     Plug 'sheerun/vim-polyglot'
     Plug 'sbdchd/neoformat'
     Plug 'psliwka/vim-smoothie'
+    Plug 'dense-analysis/ale'
 " }
 
 " Completion {
@@ -47,6 +48,8 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
 
         Plug 'ncm2/ncm2-bufword'
         Plug 'ncm2/ncm2-path'
+
+        Plug 'ncm2/ncm2-jedi'
     else
         " asyncomplete
         Plug 'prabirshrestha/asyncomplete.vim'

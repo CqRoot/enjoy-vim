@@ -46,6 +46,10 @@ if has_key(g:plugs, 'ncm2')
 	let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
 	let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
 	let g:UltiSnipsRemoveSelectModeMappings = 0
+
+	if has_key(g:plugs, 'ncm2-jedi')
+		let g:ncm2_jedi#python_version = 2
+	endif
 endif
 
 if has_key(g:plugs, 'vim-lsp')
