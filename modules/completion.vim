@@ -61,6 +61,53 @@ if has_key(g:plugs, 'vim-lsp')
 					\ })
 		autocmd BufWritePre *.go LspDocumentFormatSync
 	endif
+	if executable('vls')
+		augroup LspVls
+			au!
+			autocmd User lsp_setup call lsp#register_server({
+						\ 'name': 'vue-language-server',
+						\ 'cmd': {server_info->['vls']},
+						\ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+						\ 'whitelist': ['vue'],
+						\ 'initialization_options': {
+						\         'config': {
+						\             'html': {},
+						\              'vetur': {
+						\                  'validation': {}
+						\              }
+						\         }
+						\     }
+						\ })
+		augroup END
+	endif
+	if executable('html-languageserver')
+		au User lsp_setup call lsp#register_server({
+					\ 'name': 'html-languageserver',
+					\ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+					\ 'whitelist': ['html'],
+					\ })
+	endif
+	if executable('css-languageserver')
+		au User lsp_setup call lsp#register_server({
+					\ 'name': 'css-languageserver',
+					\ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+					\ 'whitelist': ['css', 'less', 'sass'],
+					\ })
+	endif
+	if executable('typescript-language-server')
+		au User lsp_setup call lsp#register_server({
+					\ 'name': 'javascript support using typescript-language-server',
+					\ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+					\ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+					\ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+					\ })
+		au User lsp_setup call lsp#register_server({
+					\ 'name': 'typescript-language-server',
+					\ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+					\ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+					\ 'whitelist': ['typescript', 'typescript.tsx'],
+					\ })
+	endif
 	if executable('vim-language-server')
 		augroup LspVim
 			autocmd!
@@ -72,6 +119,16 @@ if has_key(g:plugs, 'vim-lsp')
 						\   'vimruntime': $VIMRUNTIME,
 						\   'runtimepath': &rtp,
 						\ }})
+		augroup END
+	endif
+	if executable('bash-language-server')
+		augroup LspBash
+			autocmd!
+			autocmd User lsp_setup call lsp#register_server({
+						\ 'name': 'bash-language-server',
+						\ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
+						\ 'allowlist': ['sh'],
+						\ })
 		augroup END
 	endif
 endif
