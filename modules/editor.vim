@@ -24,11 +24,17 @@ if has_key(g:plugs, 'neoformat')
     let g:neoformat_go_golines = {
                 \ 'exe': 'golines',
                 \ 'stdin': 1,
+                \ 'args': ['-m 80'],
                 \ }
     let g:neoformat_enabled_go = ['golines']
     let g:neoformat_enabled_python = ['black']
+
+    augroup fmt
+        autocmd!
+        autocmd BufWritePre * undojoin | Neoformat
+    augroup END
 endif
 
 if has_key(g:plugs, 'ale')
-    let g:ale_linters = {'python': ['pylint', 'pycodestyle']}
+    let g:ale_linters = {'python': ['flake8']}
 endif
