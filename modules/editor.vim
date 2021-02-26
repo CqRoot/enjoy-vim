@@ -28,6 +28,20 @@ if has_key(g:plugs, 'neoformat')
                 \ }
     let g:neoformat_enabled_go = ['golines']
     let g:neoformat_enabled_python = ['black']
+    if filereadable('./node_modules/.bin/prettier')
+        let g:neoformat_vue_prettier = {
+                    \ 'exe': './node_modules/.bin/prettier',
+                    \ 'args': ['--write'],
+                    \ 'replace': 1
+                    \ }
+        let g:neoformat_javascript_prettier = {
+                    \ 'exe': './node_modules/.bin/prettier',
+                    \ 'args': ['--write'],
+                    \ 'replace': 1
+                    \ }
+    endif
+    let g:neoformat_enabled_vue = ['prettier']
+    let g:neoformat_enabled_javascript = ['prettier']
 
     augroup fmt
         autocmd!

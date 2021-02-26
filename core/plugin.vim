@@ -34,6 +34,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
     Plug 'sbdchd/neoformat'
     Plug 'psliwka/vim-smoothie'
     Plug 'dense-analysis/ale'
+    Plug 'gcmt/wildfire.vim'
 " }
 
 " Completion {
