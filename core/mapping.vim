@@ -71,6 +71,10 @@ endfunc
   noremap <leader>l :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
   noremap <leader>g :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 
+  " Ale
+  nmap <silent> <A-p> <Plug>(ale_previous_wrap)
+  nmap <silent> <A-n> <Plug>(ale_next_wrap)
+
   " Defx
   nmap <silent> <A-f> :Defx<CR>
 
@@ -83,4 +87,6 @@ endfunc
     nmap <C-_> <plug>NERDCommenterToggle
     xmap <C-_> <plug>NERDCommenterToggle
   endif
+  nmap <C-c> <plug>NERDCommenterToggle
+  xmap <C-c> <plug>NERDCommenterToggle
 " }

@@ -5,6 +5,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
     Plug 'dracula/vim'
     Plug 'morhetz/gruvbox'
     Plug 'kristijanhusak/vim-hybrid-material'
+    Plug 'arcticicestudio/nord-vim'
 " }
 
 " Finder {
@@ -25,6 +26,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
         Plug 'roxma/nvim-yarp'
         Plug 'roxma/vim-hug-neovim-rpc'
     endif
+    Plug 'kristijanhusak/defx-icons'
 " }
 
 " Editor {
@@ -50,7 +52,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
         Plug 'ncm2/ncm2-bufword'
         Plug 'ncm2/ncm2-path'
 
-        Plug 'ncm2/ncm2-jedi'
+        " Plug 'ncm2/ncm2-jedi'
     else
         " asyncomplete
         Plug 'prabirshrestha/asyncomplete.vim'
@@ -79,7 +81,7 @@ call plug#begin(expand('<sfile>:p:h:h').'/plugged')
 " Other {
     " Plug 'voldikss/vim-translator'
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline-themes'
     Plug 'thinca/vim-quickrun'
 " }
 

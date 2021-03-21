@@ -31,6 +31,9 @@ npm install -g typescript typescript-language-server
 npm install -g bash-language-server
 ```
 
+- linter: shellcheck
+- formater: shfmt
+
 **vim**
 
 ```bash

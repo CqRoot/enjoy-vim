@@ -5,6 +5,7 @@ if has_key(g:plugs, 'defx.nvim')
                 \ && winbufnr(2) == -1 | quit! | endif
 
     call defx#custom#option('_', {
+                \ 'columns': 'indent:icons:filename:type',
                 \ 'winwidth': 30,
                 \ 'split': 'vertical',
                 \ 'direction': 'topleft',

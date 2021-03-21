@@ -35,7 +35,7 @@ if has_key(g:plugs, 'ncm2')
 	inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-	let g:ncm2_jedi#python_version=2
+	" let g:ncm2_jedi#python_version=2
 
 	" Press enter key to trigger snippet expansion
 	" The parameters are the same as `:help feedkeys()`
@@ -53,6 +53,8 @@ if has_key(g:plugs, 'ncm2')
 endif
 
 if has_key(g:plugs, 'vim-lsp')
+	let g:lsp_diagnostics_enabled = 0
+
 	if executable('gopls')
 		au User lsp_setup call lsp#register_server({
 					\ 'name': 'gopls',
@@ -130,5 +132,12 @@ if has_key(g:plugs, 'vim-lsp')
 						\ 'allowlist': ['sh'],
 						\ })
 		augroup END
+	endif
+	if executable('pyls')
+		au User lsp_setup call lsp#register_server({
+					\ 'name': 'pyls',
+					\ 'cmd': {server_info->['pyls']},
+					\ 'whitelist': ['python'],
+					\ })
 	endif
 endif

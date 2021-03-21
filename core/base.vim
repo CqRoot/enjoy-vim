@@ -106,7 +106,7 @@ endif
 " 行号
 set number!
 " 相对行号
-set relativenumber
+" set relativenumber
 
 " 高亮当前行
 set cursorline
